@@ -1,0 +1,38 @@
+﻿@model EmailConfig
+@{
+    ViewData["Title"] = "Work";
+}
+
+
+<section class="contact_section layout_padding">
+    <div class="container-fluid">
+        <div class="row" style="display: flex;">
+            <div class="story_detail">
+                <h3>
+                    CONTACTANOS / TRABAJA CON NOSOTROS
+                </h3>
+                <h2>
+                   
+                </h2>
+            </div>
+        
+            <div class=" col-md-12 contact_form-container">
+                <div class="contact_box_2">
+                    <form asp-controller="Work" asp-action="EmailSend" asp-antiforgery="true" enctype="multipart/form-data" class="form">
+                        <input type="text" asp-for="To" name="To" placeholder="Nombre" /><br>
+                        <input type="text" asp-for="Subject" name="Subject" placeholder="Correo" /><br>
+                        <textarea asp-for="Body" name="Body" placeholder="Mensaje" style="width: 85%"></textarea><br>
+                        <input type="file" asp-for="Attachment" name="Attachment"   /><br>
+                        <input type="submit" name="Send Email" id="btnSendEmail" class="btn btn-success" style="background-color: darkblue;width: 100%;">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+    

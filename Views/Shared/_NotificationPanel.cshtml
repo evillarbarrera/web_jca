@@ -1,0 +1,10 @@
+<script>
+    var msg = @(TempData["notification"]!=null? Html.Raw(TempData["notification"]) : Html.Raw("undefined"));
+    console.log(msg)
+    if (msg) {
+            swal.fire({
+                title: msg.title,
+                text: msg.message
+            });
+    }
+</script>

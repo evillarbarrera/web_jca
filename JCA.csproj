@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Work\" />
+    <None Remove="System.Web.Mvc.Extensions" />
+    <None Remove="System.Web.Mvc.Extensions.Mvc.4" />
+    <None Remove="System.Web.Mvc.Expressions" />
+    <None Remove="System.Web.Http.Common" />
+    <None Remove="Microsoft.AspNetCore.Mvc.WebApiCompatShim" />
+    <None Remove="toastr" />
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Work\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="toastr" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+</Project>

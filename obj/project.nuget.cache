@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OykVEISVc8Atcb/GhRxwlQHoZ1Lzli1Nwd866+LcClBSiu+u/SP0jAWra1duspgaM4BMhWENq/GPEK4/sZanOg==",
+  "success": true,
+  "projectFilePath": "/Users/ejvillarb/Documents/JCA_WEB/JCA/JCA/JCA.csproj",
+  "expectedPackageFiles": [
+    "/Users/ejvillarb/.nuget/packages/jquery/1.6.3/jquery.1.6.3.nupkg.sha512",
+    "/Users/ejvillarb/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/ejvillarb/.nuget/packages/toastr/2.1.1/toastr.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

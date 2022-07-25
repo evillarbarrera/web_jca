@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JCA-WEB</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500&display=swap">
+    <link href="~/css/sweetalert2.css" rel="stylesheet" />
+    <script src="~/js/sweetalert2.js"></script>
+</head>
+<body>
+    <header class="header_section">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <a>Bienvenido a JCA</a>
+            </a>
+            <a style="float: right;margin-right: 5%">  Central: +56 2 32640163 | contacto@security.cl</a>
+            
+
+        </div>
+    </header>
+    <header class="header_section" style="background-color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="#">
+                    <div class="logo_box">
+                        <img src="~/images/jcalogo.png" alt="" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mr-2">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="index">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Nosotros
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="About" asp-action="About">Propuesta de Valor</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="About" asp-action="About_1">Quienes somos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="About" asp-action="About_1">Nuestra visión</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="About" asp-action="About_1">Misión</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Servicios
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Service">Guardias de seguridad</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Service_2">Cámaras y control CCTV</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Service_3">Control de acceso</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Service_4">Centro de capacitación</a>
+                                @* <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Service_5">Sistema de gestion</a> *@
+
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            
+                            <a class="nav-link" asp-area="" asp-controller="Work" asp-action="Work">Contactanos <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        @*<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Contacto
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-area="" asp-controller="Contact" asp-action="Contact">Contacto</a>
+                <a class="dropdown-item" asp-area="" asp-controller="Work" asp-action="work">Trabajar</a>
+            </div>
+        </li>*@
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+       <script src="~/js/sweetalert2.js"></script>
+     
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <section class="info_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-4 address_container">
+                    <div>
+
+                        <div class="address_link-container" style="margin-left: 5%;">
+                            <a href="">
+                                <img src="images/location.png" alt="">
+                                <span>
+                                    Direccion: GERMÁN EBBINGHAUSS Nº0232, Puente Alto, Santiago, Chile
+                                </span>
+                            </a>
+                            <a href="">
+                                <img src="images/phone.png" alt="">
+                                <span>
+                                    Tel: +562 3264 0163
+                                </span>
+                            </a>
+                            <a href="">
+                                <img src="images/mail.png" alt="">
+                                <span>
+                                    CONTACTO@JCASECURITY.CL
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-4 news_container">
+                    <div>
+                        <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">$(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            navText: [],
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });</script>
+
+    <script>$(".nav_search-btn").click(function () {
+            if ($(".nav_search-input").hasClass("d-none")) {
+                event.preventDefault();
+                $(".nav_search-input")
+                    .animate({
+                        left: "-1000px"
+                    },
+                        "1000000"
+                    )
+                    .removeClass("d-none");
+            } else {
+                $(".nav_search-input")
+                    .animate({
+                        left: "0px"
+                    },
+                        "1000000"
+                    )
+                    .addClass("d-none");
+            }
+        });</script>
+    @await Html.PartialAsync("_notificationPanel")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

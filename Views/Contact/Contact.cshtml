@@ -1,0 +1,30 @@
+﻿@model EmailConfig
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+
+<section class="contact_section layout_padding">
+    <div class="container-fluid">
+        <div class="row" style="display: flex;">
+            <div class="story_detail">
+                <h3>
+                    CONTACTANOS
+                </h3>
+                <h2>
+                </h2>
+            </div>
+            <div class=" col-md-12 contact_form-container">
+                <div class="contact_box">
+                    <form asp-controller="Contact" asp-action="EmailSendContact" asp-antiforgery="true" enctype="multipart/form-data" class="form">
+                        <input type="text" asp-for="To" name="To" placeholder="Nombre"><br>
+                        <input type="text" asp-for="Subject" name="Subject" placeholder="Correo"/><br>
+                        <textarea asp-for="Body" name="Body" placeholder="Mensaje" style="width: 85%"></textarea><br>
+                        <input type="submit" name="Send Email" id="btnSendEmail" class="btn btn-success" style="background-color: darkblue;width: 20%;">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>        
+</section>
