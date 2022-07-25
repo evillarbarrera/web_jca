@@ -20,6 +20,6 @@ deploy-job:
  script:
    - apt-get update -qy
    - apt-get install -y lftp
-   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --exclude README.md --exclude .git/ --exclude .gitignore --exclude .gitlab-ci.yml --reverse --verbose ./ ./; bye"
+   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./ ./; bye"
  only:
    - master
