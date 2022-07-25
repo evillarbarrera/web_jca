@@ -10,6 +10,8 @@ build-job:
 test-job:
   stage: test
   script:
+    - EXPORT = FTP_SERVER = $FTP_SERVER
+    - echo FTP_SERVER
     - echo "Servidor, $FTP_SERVER"
   only: 
     - master
