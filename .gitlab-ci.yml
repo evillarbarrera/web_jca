@@ -1,0 +1,10 @@
+image: ubuntu:20.04
+before_script:
+- apt-get update -qy
+- apt-get install -y lftp
+build:
+script:
+  - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 
+    --reverse --verbose ./ ./prueba_cicd/; bye"
+only:
+  - master
