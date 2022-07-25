@@ -23,6 +23,6 @@ deploy-job:
  script:
    - apt-get update -qy
    - apt-get install -y lftp
-   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./bin/Release ./prueba_cicd; bye"
+   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./bin/Release/netcoreapp3.1/publish ./prueba_cicd; bye"
  only:
    - master
