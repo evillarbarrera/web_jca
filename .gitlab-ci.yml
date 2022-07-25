@@ -11,7 +11,8 @@ test-job:
   stage: test
   script:
     - export FTP_SERVER=$FTP_SERVER
-    - echo FTP_SERVER
+    - echo $FTP_SERVER
+    - echo "$FTP_SERVER"
     - echo "Servidor, $FTP_SERVER"
   only: 
     - master
