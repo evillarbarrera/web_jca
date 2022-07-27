@@ -28,6 +28,6 @@ deploy-job:
   #  - apt-get install -y aspnetcore-runtime-6.0
   #  - dotnet restore
   #  - dotnet publish -c release
-   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./bin/Release/netcoreapp3.1/publish ./public_html; bye"
+   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10  ./bin/Release/netcoreapp3.1/publish/* ./public_html; bye"
  only:
    - master
