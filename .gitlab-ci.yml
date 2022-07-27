@@ -23,6 +23,11 @@ deploy-job:
  script:
    - apt-get update -qy
    - apt-get install -y lftp
-   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./bin/Release/netcoreapp3.1/publish ./prueba_cicd; bye"
+   - apt-get install -y apt-transport-https
+   - apt-get update
+   - apt-get install -y aspnetcore-runtime-6.0
+   - dotnet restore
+   - dotnet publish -c release
+   - lftp -c "set ftp:ssl-allow no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror --ignore-time --parallel=10 --reverse --verbose ./bin/Release/netcoreapp3.1/publish ./public_html; bye"
  only:
    - master
